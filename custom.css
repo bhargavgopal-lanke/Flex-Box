@@ -1,0 +1,76 @@
+
+
+
+/*This is the shorthand for flex-grow, flex-shrink and flex-basis. 
+The second and third parameters (flex-shrink and flex-basis) are optional.*/
+
+
+/*Even Coumns*/
+/*Ensures that all the children of the parent are
+ equal width no matter how many you have or what is
+ the content inside of them*/
+
+.even-columns {
+	display: flex;
+	gap: 1em;
+}
+
+.even-columns > * {
+	flex-basis: 100%;
+}
+
+
+/*GRID ISH*/
+
+/*An Unique style layout that doesn't require any media quiries*/
+/*Issue is that columns of different rows will be different widths*/
+
+.grid-ish {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+}
+
+.grid-ish > * {
+	flex: 0 1 20em;
+}
+
+
+/*Content & Sidebar*/
+
+/*Create a standard main content area with a sidebar, 
+with added bonus of not requiring media quiries*/
+
+
+.content-sidebar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+}
+
+.content-sidebar > *:nth-child(1) {
+	flex: 1 1 70%;
+	min-width: 10ch;
+}
+
+.content-sidebar > *:nth-child(2) {
+	flex: 1 1 30%;
+	min-width: 15ch;
+}
+
+.col {
+	background-color: #e5e5e5;
+	border: 1px solid #ccc;
+	padding: 3em;
+}
+
+.content {
+	background-color: #fff;
+	width: 70vw;
+	margin: 3rem auto;
+	padding: 3em;
+}
+
+.title{
+	font-weight: 900;
+}

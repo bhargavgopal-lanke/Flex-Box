@@ -1,0 +1,79 @@
+.main-content {
+	padding: 10%;
+	flex: 1 1 80%;
+	min-height: 100vH;
+}
+
+.portfolio {
+	display: grid;
+	height: 100%;
+	grid-template-rows: repeat(6, 1fr);
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 20px;
+}
+
+.portfolio-item {
+	background-color: orange;
+	color: #111;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2em;
+	font-size: 1.5em;
+}
+
+.small {
+	grid-row:span 1;
+	grid-column:span 1;
+}
+.medium {
+	grid-row: span 2;
+	grid-column:  span 2;
+}
+
+.large {
+	grid-row: span 3;
+	grid-column: span 3;
+}
+
+.tall {
+	grid-row: 4 / span 3;
+	grid-column: 4 / span 2;
+}
+
+.wide {
+	grid-row:span 2;
+	grid-column:span 3;
+}
+
+.two {
+	background-image: url(../img/image02.jpg);
+	/*background-color: #111;*/
+/*	background-blend-mode: multiply;
+	color: #ccc;*/
+	text-shadow: 0 0 3px rgba(0,0,0, 0.85);
+	background-size: cover;
+	background-position: top left;
+	transition: all ease-in-out 300ms;
+	position: relative;
+	z-index: 10;
+}
+
+.two::before {
+	content: '';
+	display: block;
+	opacity: 0.8;
+	background: black;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transition: all ease-in-out 300ms;
+	z-index: -1;
+}
+
+.two :hover::before {
+	opacity: 0.2;
+}
